@@ -1,9 +1,37 @@
 import React from "react";
+import { NavLink } from "react-router-dom";
+
+import "./style.css";
 
 export default function Navigation() {
   return (
-    <div>
-      <h1>Navigation</h1>
-    </div>
+    <React.Fragment>
+      <ul className="nav-bar">
+        <div className="nav-logo">
+          <li className="nav-link">
+            <NavLink to="/" style={{ textDecoration: "none" }}>
+              Logo
+            </NavLink>
+          </li>
+        </div>
+        <div className="nav-links">
+          <li className="nav-link">
+            <NavLink to="/postproperty" style={{ textDecoration: "none" }}>
+              Post Property
+            </NavLink>
+          </li>
+          <li className="nav-link">
+            <NavLink to="/signup" style={{ textDecoration: "none" }}>
+              Signup
+            </NavLink>
+          </li>
+          <li className="nav-link">
+            <NavLink to="/signin" style={{ textDecoration: "none" }}>
+              Login
+            </NavLink>
+          </li>
+        </div>
+      </ul>
+    </React.Fragment>
   );
 }

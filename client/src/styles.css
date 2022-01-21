@@ -1,8 +1,11 @@
 .App {
-    font-family: sans-serif;
+    font-family: "ubuntu", sans-serif;
     text-align: center;
   }
   body {
+    font-family: 'Ubuntu', sans-serif;
     background-color: bisque;
     text-align: center;
+    margin: 0px;
   }
+ 
