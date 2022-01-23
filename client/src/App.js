@@ -7,6 +7,7 @@ import SignIn from "./Components/SignIn/SignIn";
 import SignUp from "./Components/SignUp/SignUp";
 import PostProperty from "./Components/Post-Property/PostProperty";
 import Navigation from "./Components/Navigation/Navigation";
+import User from "./Components/User/App";
 
 function App() {
   return (
@@ -17,6 +18,7 @@ function App() {
         <Route path="/postproperty" exact element={<PostProperty />} />
         <Route path="/signup" exact element={<SignUp />} />
         <Route path="/signin" exact element={<SignIn />} />
+        <Route path="/user" exact element={<User />} />
       </Routes>
     </BrowserRouter>
   );
