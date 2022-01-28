@@ -1,22 +1,10 @@
 import * as React from "react";
-import { useTheme } from "@mui/material/styles";
-import OutlinedInput from "@mui/material/OutlinedInput";
-import MenuItem from "@mui/material/MenuItem";
-import FormControl from "@mui/material/FormControl";
-import Select from "@mui/material/Select";
+import TextField from "@mui/material/TextField";
+import Autocomplete from "@mui/material/Autocomplete";
 
-const ITEM_HEIGHT = 48;
-const ITEM_PADDING_TOP = 8;
-const MenuProps = {
-  PaperProps: {
-    style: {
-      maxHeight: ITEM_HEIGHT * 4.5 + ITEM_PADDING_TOP,
-      width: 250,
-    },
-  },
-};
-
+// const options = ["Option 1", "Option 2"];
 const names = [
+  "",
   "Dilsukh Nagar",
   "Mehidipatnam",
   "Koti",
@@ -29,80 +17,34 @@ const names = [
   "Secundrabad",
 ];
 
-function getStyles(name, personName, theme) {
-  return {
-    fontWeight:
-      personName.indexOf(name) === -1
-        ? theme.typography.fontWeightRegular
-        : theme.typography.fontWeightMedium,
-  };
-}
-
-export default function MultipleSelectPlaceholder() {
-  const theme = useTheme();
-  const [personName, setPersonName] = React.useState([]);
-
-  const handleChange = (event) => {
-    const {
-      target: { value },
-    } = event;
-    setPersonName(
-      // On autofill we get a the stringified value.
-      typeof value === "string" ? value.split(",") : value
-    );
-  };
+export default function TopLocations() {
+  const [value, setValue] = React.useState(names[0]);
+  const [inputValue, setInputValue] = React.useState("");
 
   return (
-    <div>
-      <FormControl sx={{ m: 1, width: 300, mt: 3 }}>
-        <Select
-          multiple
-          displayEmpty
-          value={personName}
-          onChange={handleChange}
-          input={<OutlinedInput />}
-          renderValue={(selected) => {
-            if (selected.length === 0) {
-              return <em>Placeholder</em>;
-            }
-
-            return selected.join(", ");
-          }}
-          MenuProps={MenuProps}
-          inputProps={{ "aria-label": "Without label" }}
-        >
-          <MenuItem disabled value="">
-            <em>Placeholder</em>
-          </MenuItem>
-          {names.map((name) => (
-            <MenuItem
-              key={name}
-              value={name}
-              style={getStyles(name, personName, theme)}
-            >
-              {name}
-            </MenuItem>
-          ))}
-        </Select>
-      </FormControl>
+    <div className="toplocation">
+      {/* <div>{`value: ${value !== null ? `'${value}'` : "null"}`}</div>
+      <div>{`inputValue: '${inputValue}'`}</div>
+      <br /> */}
+      <Autocomplete
+        value={value}
+        onChange={(event, newValue) => {
+          setValue(newValue);
+        }}
+        inputValue={inputValue}
+        onInputChange={(event, newInputValue) => {
+          setInputValue(newInputValue);
+        }}
+        id="controllable-states-demo"
+        options={names}
+        sx={{ width: 300 }}
+        renderInput={(params) => (
+          <TextField variant="standard" {...params} label="Select a Location" />
+        )}
+      />
     </div>
   );
 }
-
-// check boxes
-// import * as React from 'react';
-// import FormGroup from '@mui/material/FormGroup';
-// import FormControlLabel from '@mui/material/FormControlLabel';
-// import Checkbox from '@mui/material/Checkbox';
-
-// export default function CheckboxLabels() {
-//   return (
-//     <FormGroup>
-//       <FormControlLabel control={<Checkbox defaultChecked />} label="Label" />
-//       <FormControlLabel disabled control={<Checkbox />} label="Disabled" />
-//     </FormGroup>
-//   );
-// }
 
 //Range
 // import * as React from 'react';
@@ -148,35 +90,6 @@ export default function MultipleSelectPlaceholder() {
 // }
 
 //Filter
-// import * as React from 'react';
-// import Radio from '@mui/material/Radio';
-// import RadioGroup from '@mui/material/RadioGroup';
-// import FormControlLabel from '@mui/material/FormControlLabel';
-// import FormControl from '@mui/material/FormControl';
-// import FormLabel from '@mui/material/FormLabel';
-
-// export default function RowRadioButtonsGroup() {
-//   return (
-//     <FormControl>
-//       <FormLabel id="demo-row-radio-buttons-group-label">Gender</FormLabel>
-//       <RadioGroup
-//         row
-//         aria-labelledby="demo-row-radio-buttons-group-label"
-//         name="row-radio-buttons-group"
-//       >
-//         <FormControlLabel value="female" control={<Radio />} label="Female" />
-//         <FormControlLabel value="male" control={<Radio />} label="Male" />
-//         <FormControlLabel value="other" control={<Radio />} label="Other" />
-//         <FormControlLabel
-//           value="disabled"
-//           disabled
-//           control={<Radio />}
-//           label="other"
-//         />
-//       </RadioGroup>
-//     </FormControl>
-//   );
-// }
 
 //Rating
 // import * as React from 'react';
