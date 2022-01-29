@@ -1,9 +1,11 @@
-import React from "react";
+import React, { useState } from "react";
 import { NavLink } from "react-router-dom";
 
 import "./style.css";
 
 export default function Navigation() {
+  const [user, setUser] = useState("user");
+
   return (
     <React.Fragment>
       <ul className="nav-bar">
@@ -30,6 +32,13 @@ export default function Navigation() {
               Login
             </NavLink>
           </li>
+          {user && (
+            <li className="nav-link">
+              <NavLink to="/user" style={{ textDecoration: "none" }}>
+                User
+              </NavLink>
+            </li>
+          )}
         </div>
       </ul>
     </React.Fragment>
