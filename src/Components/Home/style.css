@@ -3,71 +3,136 @@
     /* background-color: rgba(156, 147, 63, 0.787); */
     display: grid;
     grid-template-rows: 4.2rem;
-    grid-template-columns: 1fr 2fr;
+    grid-template-columns: 1fr 3fr;
     grid-gap: 5px;
   }
   main {
     display: flex;
     justify-content: space-around;
     padding: 1.5%;
-    border: 1px solid grey;
     grid-column: 1/-1;
+    box-shadow: 2px 2px 2px #110601f7;
+    background-color: rgb(233, 232, 225);
   }
   aside {
-    border: 1px solid grey;
+    border-right: 2px solid grey;
+    background-color: rgb(241, 227, 200);
   }
-  section {
-    border: 1px solid grey;
-  }
-  .stay-type{
-      display: flex;
-      justify-content: space-evenly;
-  }
-  .property{
-    box-sizing: border-box;
-    border: 1px solid gray;
-  }
-  .property-name{
-    box-sizing: border-box;
-    border: 1px solid gray;
-  }
-  .property-details{
-    box-sizing: border-box;
-    border: 1px solid gray;
-  }
-  .prop-img{
-    box-sizing: border-box;
-    border: 1px solid gray;
-  }
-  .prop-info1{
-    box-sizing: border-box;
-    border: 1px solid gray;
-  }
-  .prop-info2{
-    box-sizing: border-box;
-    border: 1px solid gray;
-  }
+
+ 
+  /* Style for Top Loaction */
+
 .toplocation{
-  margin-top: -10px;
+  margin-top: -8px;
+  margin-left: 6px;
 }
+
+ /* Style for Search Loaction */
+
 .searchLocation{
-  margin-top: -22px;
+  margin-top: -16px;
 }
+
 .filter{
+  color: rgb(92, 53, 2);
   display: flex;
   flex-direction: column;
+  margin-left: 10px;
+ 
 }
+.css-j204z7-MuiFormControlLabel-root .MuiFormControlLabel-label{
+  font-size: 14px;
+  
+}
+
+/* Styles for filter headings */
+
 #demo-row-radio-buttons-group-label{
-  color: rgb(141, 6, 62);
+  color: rgb(150, 5, 65);
+  font-size: 18px;
   font-weight: 900;
   text-align: left;
+  margin-left: 0px;
 }
+
 .filter-title, .result-title{
   font-family: monospace;
   padding-top: 2px;
   margin-bottom: -9px;
 }
-#controllable-states-demo{
-  
-  height: 1rem;
+
+
+/*Styles for all Filters except Stay type */
+
+.form-box{
+  display: flex;
+  flex-wrap: wrap;
+	margin:2px;
+  padding: 2px 0px;
+  line-height: 2;
+}
+
+.form-box label input{
+	display: none;
+}
+.form-box label {
+	cursor: pointer;
+	padding-left: 26px;
+  padding: 1px 20px;
+	position: relative;
+}
+.form-box label .circle{
+	height: 16px;
+	width: 16px;
+	border:3px solid #440202;
+	border-radius: 50%;
+	position: absolute;
+	left:0.2px;
+	top:5px;
+	transition:.2s ease-in-out 0s;
+}
+.form-box label .circle::before{
+	content: '';
+	height: 8px;
+	width: 8px;
+	background-color: #aa6b0c;
+	position: absolute;
+	left:1px;
+	top:1px;
+	border-radius: 50%;
+	transition: .2s ease-in-out 0s;
+	transform: scale(0);
+}
+.form-box label span{
+	font-size: 15px;
+	color: rgb(92, 53, 2);
+	display: flex;
+  justify-content: space-evenly;
+	transition:.2s ease-in-out 0s;
+}
+.form-box label input:checked + .circle{
+	border-color:#6d4305;
+}
+.form-box label input:checked + .circle::before{
+	transform: scale(1);
+}
+.form-box label input:checked + .circle + span{
+	color:#855207;
+}
+
+/* For Stay Result */
+
+.single-property{
+  box-shadow: 1px 1px 6px 1px #3d1401f7;
+}
+
+.prop-info1, .prop-info2, .prop-img, .property-details, .property-name{
+  box-sizing: border-box;
+  border: 1px solid gray;
+}
+
+/* To keep filter items in order */
+
+span.filter-type-name{
+ min-width: 85px;
 }
