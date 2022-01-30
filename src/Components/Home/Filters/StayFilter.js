@@ -1,22 +1,31 @@
 import * as React from "react";
-import Radio from "@mui/material/Radio";
-import RadioGroup from "@mui/material/RadioGroup";
-import FormControlLabel from "@mui/material/FormControlLabel";
-import FormControl from "@mui/material/FormControl";
-import FormLabel from "@mui/material/FormLabel";
+
+import "./style.css";
 
 export default function StayFilter() {
   return (
-    <FormControl>
-      <FormLabel id="demo-row-radio-buttons-group-label">Stay Type</FormLabel>
-      <RadioGroup
-        row
-        aria-labelledby="demo-row-radio-buttons-group-label"
-        name="row-radio-buttons-group"
-      >
-        <FormControlLabel value="PGs" control={<Radio />} label="PGs" />
-        <FormControlLabel value="Houses" control={<Radio />} label="Houses" />
-      </RadioGroup>
-    </FormControl>
+    <>
+      <section class="radio-section">
+        <ul className="radio-list">
+          <li className="radio-item">
+            <input className="pg-input" type="radio" name="radio" id="pgs" />
+            <label className="pg-label" for="pgs">
+              PGs
+            </label>
+          </li>
+          <li className="radio-item">
+            <input
+              className="house-input"
+              type="radio"
+              name="radio"
+              id="houses"
+            />
+            <label className="house-label" for="houses">
+              Houses
+            </label>
+          </li>
+        </ul>
+      </section>
+    </>
   );
 }

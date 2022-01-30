@@ -9,16 +9,6 @@ export default function HouseFilter() {
         <label>
           <input type="radio" name="HouseType" />
           <div className="circle"></div>
-          <span>Independent</span>
-        </label>
-        <label>
-          <input type="radio" name="HouseType" />
-          <div className="circle"></div>
-          <span>Flat</span>
-        </label>
-        <label>
-          <input type="radio" name="HouseType" />
-          <div className="circle"></div>
           <span>1st Floor</span>
         </label>
         <label>
@@ -30,6 +20,16 @@ export default function HouseFilter() {
           <input type="radio" name="HouseType" />
           <div className="circle"></div>
           <span>3rd Floor</span>
+        </label>
+        <label>
+          <input type="radio" name="HouseType" />
+          <div className="circle"></div>
+          <span>Flat</span>
+        </label>
+        <label>
+          <input type="radio" name="HouseType" />
+          <div className="circle"></div>
+          <span>Independent</span>
         </label>
       </div>
     </>

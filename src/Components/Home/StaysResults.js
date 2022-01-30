@@ -18,7 +18,7 @@ function StaysResults() {
             <img
               src="https://st4.depositphotos.com/16030310/25210/v/600/depositphotos_252105266-stock-illustration-vector-illustration-silver-golden-letters.jpg"
               alt="pg"
-              width={150}
+              width={200}
             />
           </Col>
           <Col sm={4} className="prop-info1">

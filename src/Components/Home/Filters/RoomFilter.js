@@ -10,37 +10,32 @@ export default function RoomFilter() {
         <label>
           <input type="radio" name="room" />
           <div className="circle"></div>
-          <span>Single Room</span>
+          <span className="filter-type-name">Single Share</span>
         </label>
         <label>
           <input type="radio" name="room" />
           <div className="circle"></div>
-          <span>Single Share</span>
+          <span className="filter-type-name">Two Share</span>
         </label>
         <label>
           <input type="radio" name="room" />
           <div className="circle"></div>
-          <span>Two Share</span>
+          <span className="filter-type-name">Three Share</span>
         </label>
         <label>
           <input type="radio" name="room" />
           <div className="circle"></div>
-          <span>Three Share</span>
+          <span className="filter-type-name">Four Share</span>
         </label>
         <label>
           <input type="radio" name="room" />
           <div className="circle"></div>
-          <span>Four Share</span>
+          <span className="filter-type-name">Five Share</span>
         </label>
         <label>
           <input type="radio" name="room" />
           <div className="circle"></div>
-          <span>Five Share</span>
-        </label>
-        <label>
-          <input type="radio" name="room" />
-          <div className="circle"></div>
-          <span>Six Share</span>
+          <span className="filter-type-name">Six Share</span>
         </label>
       </div>
     </>
