@@ -7,6 +7,8 @@ import "./style.css";
 import RoomFilter from "./Filters/RoomFilter";
 import PreferredFilter from "./Filters/Preferred";
 import SearchLocation from "./Filters/SearchLocation";
+import HouseFilter from "./Filters/HouseFilter";
+import HousePreferredFilter from "./Filters/HousePreferred";
 
 export default function Home() {
   return (
@@ -27,6 +29,8 @@ export default function Home() {
           <GenderFilter />
           <PreferredFilter />
           <RoomFilter />
+          <HouseFilter />
+          <HousePreferredFilter />
         </div>
       </aside>
       <section>
