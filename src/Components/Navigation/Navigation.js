@@ -11,30 +11,45 @@ export default function Navigation() {
       <ul className="nav-bar">
         <div className="nav-logo">
           <li className="nav-link">
-            <NavLink to="/" style={{ textDecoration: "none" }}>
+            <NavLink
+              to="/"
+              style={{ textDecoration: "none", color: "rgb(2, 66, 66)" }}
+            >
               Logo
             </NavLink>
           </li>
         </div>
         <div className="nav-links">
           <li className="nav-link">
-            <NavLink to="/postproperty" style={{ textDecoration: "none" }}>
+            <NavLink
+              to="/postproperty"
+              style={{ textDecoration: "none", color: "rgb(2, 66, 66)" }}
+            >
               Post Property
             </NavLink>
           </li>
           <li className="nav-link">
-            <NavLink to="/signup" style={{ textDecoration: "none" }}>
+            <NavLink
+              to="/signup"
+              style={{ textDecoration: "none", color: "rgb(2, 66, 66)" }}
+            >
               Signup
             </NavLink>
           </li>
           <li className="nav-link">
-            <NavLink to="/signin" style={{ textDecoration: "none" }}>
+            <NavLink
+              to="/signin"
+              style={{ textDecoration: "none", color: "rgb(2, 66, 66)" }}
+            >
               Login
             </NavLink>
           </li>
           {user && (
             <li className="nav-link">
-              <NavLink to="/user" style={{ textDecoration: "none" }}>
+              <NavLink
+                to="/user"
+                style={{ textDecoration: "none", color: "rgb(2, 66, 66)" }}
+              >
                 User
               </NavLink>
             </li>
