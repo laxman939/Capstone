@@ -4,7 +4,16 @@
   }
   body {
     font-family: 'Ubuntu', sans-serif;
-    background-color: bisque;
+    /* background-color: bisque; */
+    /* background-image: url('https://image.freepik.com/free-vector/watercolour-background-blue-tones_91008-275.jpg');*/
+    /* background-image: url('https://image.freepik.com/free-vector/watercolor-green-abstract-shapes-background_23-2149080626.jpg');*/
+    /* background-image: url('https://image.freepik.com/free-vector/watercolor-background_91008-33.jpg');*/
+    /* background-image: url('https://image.freepik.com/free-vector/organic-watercolor-background_91008-367.jpg'); */
+    /* background-image: url('https://image.freepik.com/free-vector/blue-abstract-gradient-wave-vector-background_53876-111548.jpg'); */
+    background-image: url('https://image.freepik.com/free-vector/beautiful-summer-gradient-background-blue-yellow_53876-120751.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
     text-align: center;
     margin: 0px;
   }
