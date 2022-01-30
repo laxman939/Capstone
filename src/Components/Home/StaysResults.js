@@ -45,22 +45,6 @@ function StaysResults() {
           </Col>
         </Row>
       </Container>
-      <Container>
-        <Row>
-          <Col sm={8}>
-            <h5>Pg3</h5>
-            <p>Location</p>
-          </Col>
-        </Row>
-        <Row>
-          <Col sm={4}>
-            <h4>Images</h4>
-          </Col>
-          <Col sm={4}>
-            <h4>Details</h4>
-          </Col>
-        </Row>
-      </Container>
     </div>
   );
 }
