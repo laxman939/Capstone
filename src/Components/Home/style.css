@@ -12,11 +12,10 @@
     padding: 1.5%;
     grid-column: 1/-1;
     box-shadow: 2px 2px 2px #110601f7;
-    background-color: rgb(233, 232, 225);
   }
   aside {
     border-right: 2px solid grey;
-    background-color: rgb(241, 227, 200);
+    /* background-color: rgb(243, 226, 192); */
   }
 
  
@@ -63,6 +62,14 @@
 
 
 /*Styles for all Filters except Stay type */
+
+#pgfor{
+  color: rgb(150, 5, 65);
+  font-size: 18px;
+  font-weight: 900;
+  text-align: left;
+  margin-left: 2px;
+}
 
 .form-box{
   display: flex;
@@ -123,6 +130,7 @@
 /* For Stay Result */
 
 .single-property{
+  margin: 10px 0px;
   box-shadow: 1px 1px 6px 1px #3d1401f7;
 }
 
