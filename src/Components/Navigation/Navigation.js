@@ -13,7 +13,7 @@ export default function Navigation() {
           <li className="nav-link">
             <NavLink
               to="/"
-              style={{ textDecoration: "none", color: "rgb(2, 66, 66)" }}
+              style={{ textDecoration: "none", color: "rgb(132 35 6)" }}
             >
               Logo
             </NavLink>
@@ -23,7 +23,7 @@ export default function Navigation() {
           <li className="nav-link">
             <NavLink
               to="/postproperty"
-              style={{ textDecoration: "none", color: "rgb(2, 66, 66)" }}
+              style={{ textDecoration: "none", color: "rgb(132 35 6)" }}
             >
               Post Property
             </NavLink>
@@ -31,7 +31,7 @@ export default function Navigation() {
           <li className="nav-link">
             <NavLink
               to="/signup"
-              style={{ textDecoration: "none", color: "rgb(2, 66, 66)" }}
+              style={{ textDecoration: "none", color: "rgb(132 35 6)" }}
             >
               Signup
             </NavLink>
@@ -39,7 +39,7 @@ export default function Navigation() {
           <li className="nav-link">
             <NavLink
               to="/signin"
-              style={{ textDecoration: "none", color: "rgb(2, 66, 66)" }}
+              style={{ textDecoration: "none", color: "rgb(132 35 6)" }}
             >
               Login
             </NavLink>
@@ -48,7 +48,7 @@ export default function Navigation() {
             <li className="nav-link">
               <NavLink
                 to="/user"
-                style={{ textDecoration: "none", color: "rgb(2, 66, 66)" }}
+                style={{ textDecoration: "none", color: "rgb(132 35 6)" }}
               >
                 User
               </NavLink>
