@@ -51,7 +51,7 @@
   font-size: 18px;
   font-weight: 900;
   text-align: left;
-  margin-left: 0px;
+  margin-left: -18px;
 }
 
 .filter-title, .result-title{
@@ -67,8 +67,9 @@
   color: rgb(150, 5, 65);
   font-size: 18px;
   font-weight: 900;
-  text-align: left;
-  margin-left: 2px;
+  margin-left: -12px;
+  min-width: 102px;
+  padding-left: 0px;
 }
 
 .form-box{
