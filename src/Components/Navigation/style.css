@@ -5,17 +5,19 @@
     justify-content: space-around;
     margin: -12px 0px;
     padding: 1.5%;
-    background-color: rgb(141, 82, 6);
-    color: rgb(2, 66, 66);
+    /* background-color: rgb(104 110 57 / 98%); */
+    box-shadow: 1px 1px 4px grey;
   }
 .nav-logo{
     font-size: 22px;
+    font-weight: 900;
     margin-left: 1px;
     margin-right: 40%;
    
 }
   .nav-links {
     font-size: 17px;
+    font-weight: 700;
     margin-right: 10%;
     display: contents;
   }
