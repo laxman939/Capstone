@@ -8,54 +8,56 @@ export default function Navigation() {
 
   return (
     <React.Fragment>
-      <ul className="nav-bar">
-        <div className="nav-logo">
-          <li className="nav-link">
-            <NavLink
-              to="/"
-              style={{ textDecoration: "none", color: "rgb(132 35 6)" }}
-            >
-              Logo
-            </NavLink>
-          </li>
-        </div>
-        <div className="nav-links">
-          <li className="nav-link">
-            <NavLink
-              to="/postproperty"
-              style={{ textDecoration: "none", color: "rgb(132 35 6)" }}
-            >
-              Post Property
-            </NavLink>
-          </li>
-          <li className="nav-link">
-            <NavLink
-              to="/signup"
-              style={{ textDecoration: "none", color: "rgb(132 35 6)" }}
-            >
-              Signup
-            </NavLink>
-          </li>
-          <li className="nav-link">
-            <NavLink
-              to="/signin"
-              style={{ textDecoration: "none", color: "rgb(132 35 6)" }}
-            >
-              Login
-            </NavLink>
-          </li>
-          {user && (
+      <div className="nav-section sticky-top">
+        <ul className="nav-list">
+          <div className="nav-logo">
             <li className="nav-link">
               <NavLink
-                to="/user"
-                style={{ textDecoration: "none", color: "rgb(132 35 6)" }}
+                to="/"
+                style={{ textDecoration: "none", color: "rgb(10 48 183)" }}
               >
-                User
+                Logo
               </NavLink>
             </li>
-          )}
-        </div>
-      </ul>
+          </div>
+          <div className="nav-links">
+            <li className="nav-link">
+              <NavLink
+                to="/postproperty"
+                style={{ textDecoration: "none", color: "rgb(10 48 183)" }}
+              >
+                Post Property
+              </NavLink>
+            </li>
+            <li className="nav-link">
+              <NavLink
+                to="/signup"
+                style={{ textDecoration: "none", color: "rgb(10 48 183)" }}
+              >
+                Signup
+              </NavLink>
+            </li>
+            <li className="nav-link">
+              <NavLink
+                to="/signin"
+                style={{ textDecoration: "none", color: "rgb(10 48 183)" }}
+              >
+                Login
+              </NavLink>
+            </li>
+            {user && (
+              <li className="nav-link">
+                <NavLink
+                  to="/user"
+                  style={{ textDecoration: "none", color: "rgb(10 48 183)" }}
+                >
+                  User
+                </NavLink>
+              </li>
+            )}
+          </div>
+        </ul>
+      </div>
     </React.Fragment>
   );
 }
