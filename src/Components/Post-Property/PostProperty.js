@@ -1,11 +1,27 @@
 import React from "react";
 
+import "./style.css"
+
 const PostProperty = () => {
-  return (
-    <div>
-      <h1>Post a Property</h1>
-    </div>
-  );
+    return (
+        <div>
+            <form>
+                <input type="text" placeholder="Enter"/>
+                <input type="text" placeholder="Enter"/>
+                <input type="text" placeholder="Enter"/>
+                <input type="text" placeholder="Enter"/>
+                <input type="text" placeholder="Enter"/>
+                <input type="text" placeholder="Enter"/>
+                <input type="text" placeholder="Enter"/>
+                <input type="text" placeholder="Enter"/>
+                <input type="text" placeholder="Enter"/>
+                <input type="text" placeholder="Enter"/>
+                <input type="text" placeholder="Enter"/>
+                <input type="text" placeholder="Enter"/>
+                <input type="file" multiple placeholder="Enter"/>
+            </form>
+        </div>
+    );
 };
 
 export default PostProperty;
