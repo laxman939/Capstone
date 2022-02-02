@@ -4,7 +4,8 @@ import FormLabel from "@mui/material/FormLabel";
 export default function HousePreferredFilter() {
   return (
     <>
-      <FormLabel id="demo-row-radio-buttons-group-label">House for</FormLabel>
+      <FormLabel id="housefor">House for: </FormLabel>
+      <br />
       <div className="form-box">
         <label>
           <input type="radio" name="preferred" />

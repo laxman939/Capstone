@@ -22,7 +22,7 @@ export default function TopLocations() {
   const [inputValue, setInputValue] = React.useState("");
 
   return (
-    <div className="toplocation">
+    <div id="toplocation">
       {/* <div>{`value: ${value !== null ? `'${value}'` : "null"}`}</div>
       <div>{`inputValue: '${inputValue}'`}</div>
       <br /> */}
@@ -37,9 +37,13 @@ export default function TopLocations() {
         }}
         id="controllable-states-demo"
         options={names}
-        sx={{ width: 300 }}
         renderInput={(params) => (
-          <TextField variant="standard" {...params} label="Select a Location" />
+          <TextField
+            className="top-location-textfield"
+            variant="standard"
+            {...params}
+            label="Select a Location"
+          />
         )}
       />
     </div>

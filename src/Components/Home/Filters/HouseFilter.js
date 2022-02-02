@@ -4,7 +4,7 @@ import FormLabel from "@mui/material/FormLabel";
 export default function HouseFilter() {
   return (
     <>
-      <FormLabel id="demo-row-radio-buttons-group-label">House Type</FormLabel>
+      <FormLabel id="housetype">House Type:</FormLabel>
       <div className="form-box">
         <label>
           <input type="radio" name="HouseType" />
