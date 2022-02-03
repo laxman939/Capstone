@@ -86,7 +86,7 @@ const PostProperty = () => {
                  PriceRange:<input type="text" name="PriceRange" />
                      </label>
                      <select>
-                     <option value="Below 10 Thousand">Below 1o Thousand</option>
+                     <option value="Below 10 Thousand">Below 10 Thousand</option>
                      <option value="1o-20 Thousand">10-20 Thousand</option>
                      <option value="20-30 Thousand">20-30 Thousand</option>
                      <option value="30-40 Thousand">30-40 Thousand</option>
