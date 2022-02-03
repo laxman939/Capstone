@@ -34,13 +34,13 @@ const PostProperty = () => {
                      <option value="FiveShare">FiveShare</option>
                      <option value="SixShare">SixShare</option>
                      </select><br/>
-                     <label/>
-                     Houses Preferred<input type="text" name= "Houses Preferred" /><br/>
-                     <label/>
+                     <label>
+                 HousePreferred<input type="Text" name= "HousePreferred" /><br/>
+                     </label>
                      <select>
                      <option value="Family">Family</option>
                      <option value="Bachelor's">Bachelor's</option>
-                     </select><br/>
+                     </select>
                      <label>
                  HouseType<input type="Text" name= "Housetype" /><br/>
                      </label>
