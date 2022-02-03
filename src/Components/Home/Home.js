@@ -21,7 +21,7 @@ export default function Home() {
       <main className="main-section">
         <div className="container">
           <div className="row location">
-            <div className="col-6 col-sm-auto top">
+            <div className="col-6 col-sm-2 top">
               <TopLocations />
             </div>
             <div className="col-6 col-sm-2 search">
