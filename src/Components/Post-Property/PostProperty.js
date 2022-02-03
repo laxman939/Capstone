@@ -35,7 +35,7 @@ const PostProperty = () => {
                      <option value="SixShare">SixShare</option>
                      </select><br/>
                      <label>
-                 HousePreferred<input type="Text" name= "HousePreferred" /><br/>
+                 HousePreferred<input type="Text" name= "HousePreferred" />
                      </label>
                      <select>
                      <option value="Family">Family</option>
