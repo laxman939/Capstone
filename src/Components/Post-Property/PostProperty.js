@@ -6,18 +6,53 @@ const PostProperty = () => {
     return (
         <div>
             <form>
-                <label>
-                 PropertyName:<input type="text" name="PropertyName" />
+            <label>
+                 PropertyName<input type="text" name="PropertyName" />
                      </label>
                      <label>
-                 PropertyType:<input type="text" name="PropertyType" />
-                     </label>    
-                <select>
-                <option value="PG's">PG's </option>
-                <option value="Houses">Houses</option>
+                 PropertyType<input type="text" name="PropertyType" />
+                     </label> 
+                     <select>
+                <option value="PG's">PG's</option>
+                <option value="HOUSES">Houses</option>
+                </select>
+                     <label>
+                 PG'S Preferred<input type="text" name="PG'S Preferred" />
+                     </label>
+                  <select>
+                <option value="Students">Students</option>
+                <option value="Professionals">Professionals</option>
                 </select>
                 <label>
-                 PropertyLocation:<input type="text" name="PropertyLocation" />
+                 RoomType<input type="text" name="RoomType" />
+                     </label>
+                     <select>
+                     <option value="SingleShare">SingleShare</option>
+                     <option value="TwoShare">TwoShare</option>
+                     <option value="ThreeShare">ThreeShare</option>
+                     <option value="FourShare">FourShare</option>
+                     <option value="FiveShare">FiveShare</option>
+                     <option value="SixShare">SixShare</option>
+                     </select><br/>
+                     <label/>
+                     Houses Preferred<input type="text" name= "Houses Preferred" /><br/>
+                     <label/>
+                     <select>
+                     <option value="Family">Family</option>
+                     <option value="Bachelor's">Bachelor's</option>
+                     </select><br/>
+                     <label>
+                 HouseType<input type="Text" name= "Housetype" /><br/>
+                     </label>
+                     <select>
+                     <option value="1st Floor">1st Floor</option>
+                     <option value="2nd Floor">2nd Floor</option>
+                     <option value="3rd Floor">3rd Floor</option>
+                     <option value="Flat">Flat</option>
+                     <option value="Independent">Independent</option>
+                     </select><br/>
+                     <label>
+                 PropertyLocation<input type="text" name="PropertyLocation" />
                      </label>
                 <select>
                 <option value="Mehidipatnam">Mehidipatnam</option>
@@ -31,7 +66,7 @@ const PostProperty = () => {
                 <option value="Secunderbad">Secunderbad</option>
                 </select>
                 <label>
-                 LocationType:<input type="text" name="LocationType" />
+                 Locality<input type="text" name="Locality" />
                      </label>
                 <select>
                 <option value="Mehidipatnam">Mehidipatnam</option>
@@ -51,20 +86,22 @@ const PostProperty = () => {
                  PriceRange:<input type="text" name="PriceRange" />
                      </label>
                      <select>
-                     <option value="Below 1 lakh">Below 1 Lakh</option>
-                     <option value="5-15 Lakhs">5-15 Lakhs</option>
-                     <option value="15-30 Lakhs">15-30 Lakhs</option>
-                     <option value="30-60 Lakhs">30-60 Lakhs</option>
-                </select>
+                     <option value="Below 10 Thousand">Below 1o Thousand</option>
+                     <option value="1o-20 Thousand">10-20 Thousand</option>
+                     <option value="20-30 Thousand">20-30 Thousand</option>
+                     <option value="30-40 Thousand">30-40 Thousand</option>
+                     </select>
+                
                 <label>
-                 UploadImages:<input type="text" name="UploadImages" />
+                 UploadImages<input type="text" name="UploadImages" />
                      </label>
                   <label>   
                  <input type="file" name="UploadImages"placeholder="ChoosenFile" />
                     </label>
                  <label>
-                 Description:<input type="text" name="Description" />
+                 Description<input type="text" name="Description" />
                      </label>
+                     
             </form>
         <button type = 'submit'>submit</button>
         </div>
