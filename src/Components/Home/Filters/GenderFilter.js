@@ -20,7 +20,7 @@ export default function GenderFilter() {
         <label>
           <input type="radio" name="gender" />
           <div className="circle"></div>
-          <span>Female 🤵 🙍‍♀️</span>
+          <span>Both 🤵 🙍‍♀️</span>
         </label>
       </div>
     </>

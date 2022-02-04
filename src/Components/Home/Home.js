@@ -19,7 +19,7 @@ export default function Home() {
   return (
     <>
       <main className="main-section">
-        <div className="container">
+        <div className="container main">
           <div className="row location">
             <div className="col-6 col-sm-2 top">
               <TopLocations />
