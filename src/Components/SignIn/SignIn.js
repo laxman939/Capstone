@@ -1,11 +1,11 @@
-import {Link} from "react-router-dom";
+import { Link } from "react-router-dom";
 
-import "./style.css"
+import "./style.css";
 
 export default function SignIn() {
   return (
     <div>
-      <form action="action_page.php" method="post">
+      <form action="/">
         <div className="imgcontainer">
           <img src="img_avatar2.png" alt="Avatar" class="avatar" />
         </div>
@@ -21,7 +21,7 @@ export default function SignIn() {
             name="uname"
             required
           />
-<br/>
+          <br />
           <label htmlfor="psw">
             <b>Password</b>
           </label>
@@ -31,19 +31,17 @@ export default function SignIn() {
             name="psw"
             required
           />
-
         </div>
-        
+
         <button type="submit">Login</button>
-        <div className="container" >
-      
+        <div className="container">
           <span className="psw">
             Forgot <a href="/">password?</a>
           </span>
         </div>
       </form>
       <div>
-     Click here for <Link to="/signup">Signup</Link>
+        Click here for <Link to="/signup">Signup</Link>
       </div>
     </div>
   );
