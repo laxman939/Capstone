@@ -1,3 +1,7 @@
+import {Link} from "react-router-dom";
+
+import "./style.css"
+
 export default function SignIn() {
   return (
     <div>
@@ -5,18 +9,19 @@ export default function SignIn() {
         <div className="imgcontainer">
           <img src="img_avatar2.png" alt="Avatar" class="avatar" />
         </div>
-
+        <label for="myCheck">Checkbox:</label>
+        <input type="checkbox" id="myCheck" onclick="myFunction()" />
         <div className="container">
           <label htmlfor="uname">
             <b>Username</b>
           </label>
           <input
-            type="text"
-            placeholder="Enter Username"
+            type="mail"
+            placeholder="Enter your Mail"
             name="uname"
             required
           />
-
+<br/>
           <label htmlfor="psw">
             <b>Password</b>
           </label>
@@ -27,23 +32,18 @@ export default function SignIn() {
             required
           />
 
-          <button type="submit">Login</button>
-          <label>
-            <input type="checkbox" checked="checked" name="remember" /> Remember
-            me
-          </label>
         </div>
-        <div className="container" style={{backgroundColor:"#f1f1f1"}}>
-          <button type="button" class="cancelbtn">
-            Cancel
-          </button>
+        
+        <button type="submit">Login</button>
+        <div className="container" >
+      
           <span className="psw">
             Forgot <a href="/">password?</a>
           </span>
         </div>
       </form>
       <div>
-        <h1>Signin</h1>
+     Click here for <Link to="/signup">Signup</Link>
       </div>
     </div>
   );
