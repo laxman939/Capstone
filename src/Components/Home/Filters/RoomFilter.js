@@ -5,7 +5,7 @@ import FormLabel from "@mui/material/FormLabel";
 export default function RoomFilter() {
   return (
     <>
-      <FormLabel id="demo-row-radio-buttons-group-label">Room Type</FormLabel>
+      <FormLabel id="roomtype">Room Type: </FormLabel>
       <div className="form-box">
         <label htmlFor="single">
           <input type="radio" name="room" id="single" />
@@ -26,16 +26,6 @@ export default function RoomFilter() {
           <input type="radio" name="room" id="four" />
           <div className="circle"></div>
           <span className="filter-type-name">Four Share</span>
-        </label>
-        <label htmlFor="five">
-          <input type="radio" name="room" id="five" />
-          <div className="circle"></div>
-          <span className="filter-type-name">Five Share</span>
-        </label>
-        <label htmlFor="six">
-          <input type="radio" name="room" id="six" />
-          <div className="circle"></div>
-          <span className="filter-type-name">Six Share</span>
         </label>
       </div>
     </>

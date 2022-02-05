@@ -1,42 +1,46 @@
-.home-section {
-    margin: 8px 0px;
-    /* background-color: rgba(156, 147, 63, 0.787); */
-    display: grid;
-    grid-template-rows: 4.2rem;
-    grid-template-columns: 1fr 3fr;
-    grid-gap: 5px;
-  }
-  main {
+main {
+    width: 100%;
     display: flex;
     justify-content: space-around;
-    padding: 1.5%;
-    grid-column: 1/-1;
-    box-shadow: 2px 2px 2px #110601f7;
+    box-shadow: 0px 3px 0px 0px #110601f7;
+
   }
-  aside {
-    border-right: 2px solid grey;
-    /* background-color: rgb(243, 226, 192); */
+  section {
+    border-left: 2px solid grey;
   }
 
- 
+  #image{
+    padding: 5px;
+    width: 9rem;
+  }
+
   /* Style for Top Loaction */
 
-.toplocation{
-  margin-top: -8px;
-  margin-left: 6px;
+  .location{
+    display: -webkit-box;
+    justify-content: space-between;
+    margin: -13px 44px;
+    margin-right: -96px;
+  }
+
+.top{
+  width: 30%;
+  margin-top: 35px;
+  padding-bottom: -20px;
 }
 
  /* Style for Search Loaction */
-
-.searchLocation{
-  margin-top: -16px;
+.search{
+  width: 40%;
+  margin-top: -15px;
+  margin-left: 155px;
 }
 
 .filter{
-  color: rgb(92, 53, 2);
+  color: rgb(70, 60, 3);
   display: flex;
   flex-direction: column;
-  margin-left: 10px;
+  margin-left: 12px;
  
 }
 .css-j204z7-MuiFormControlLabel-root .MuiFormControlLabel-label{
@@ -45,38 +49,60 @@
 }
 
 /* Styles for filter headings */
-
-#demo-row-radio-buttons-group-label{
-  color: rgb(150, 5, 65);
-  font-size: 18px;
-  font-weight: 900;
-  text-align: left;
-  margin-left: -18px;
-}
-
 .filter-title, .result-title{
   font-family: monospace;
-  padding-top: 2px;
+  padding-top: 8px;
   margin-bottom: -9px;
 }
 
 
 /*Styles for all Filters except Stay type */
 
-#pgfor{
+.filter-section{
+  position: absolute;
+  width: 20%;
+  align-items: left;
+  padding-left: 8px;
+}
+.container{
+  margin-left: -8px;
+}
+.result-section{
+  width: 65rem;
+  margin-left: 220px;
+}
+.property-container{
+  width: 100%;
+  position: relative;
+  margin-left: 2px;
+  box-shadow: 0px 3px 1px 0px #110601f7;
+
+}
+.stays-filter{
+  width: 18%;
+  padding: 1px;
+  margin-left: -8px;
+}
+
+#pgfor, #roomtype, #preferredfor, #housetype, #housefor{
   color: rgb(150, 5, 65);
   font-size: 18px;
   font-weight: 900;
-  margin-left: -12px;
-  min-width: 102px;
-  padding-left: 0px;
+  width: 190px;
+  letter-spacing: 1px;
+  text-align: left;
+  padding: 1%;
+  padding-left: 1px;
+  margin-right: -15px;
 }
 
 .form-box{
   display: flex;
+  flex-direction: row;
   flex-wrap: wrap;
+  width: 95%;
 	margin:2px;
-  padding: 2px 0px;
+  padding-left: 0px;
   line-height: 2;
 }
 
@@ -85,14 +111,13 @@
 }
 .form-box label {
 	cursor: pointer;
-	padding-left: 26px;
-  padding: 1px 20px;
+  padding: 1px 15px;
 	position: relative;
 }
 .form-box label .circle{
 	height: 16px;
 	width: 16px;
-	border:3px solid #440202;
+	border:2px solid #998f8f;
 	border-radius: 50%;
 	position: absolute;
 	left:0.2px;
@@ -101,25 +126,26 @@
 }
 .form-box label .circle::before{
 	content: '';
-	height: 8px;
-	width: 8px;
-	background-color: #aa6b0c;
+	height: 12px;
+	width: 12px;
+	background-color: #043397;
 	position: absolute;
-	left:1px;
-	top:1px;
+	left:0px;
+	top:0px;
 	border-radius: 50%;
 	transition: .2s ease-in-out 0s;
 	transform: scale(0);
 }
 .form-box label span{
+  width: 115px;
 	font-size: 15px;
 	color: rgb(92, 53, 2);
 	display: flex;
-  justify-content: space-evenly;
+  justify-content: space-around;
 	transition:.2s ease-in-out 0s;
 }
 .form-box label input:checked + .circle{
-	border-color:#6d4305;
+	border-color:#df640b;
 }
 .form-box label input:checked + .circle::before{
 	transform: scale(1);
@@ -128,20 +154,117 @@
 	color:#855207;
 }
 
-/* For Stay Result */
-
-.single-property{
-  margin: 10px 0px;
-  box-shadow: 1px 1px 6px 1px #3d1401f7;
-}
-
-.prop-info1, .prop-info2, .prop-img, .property-details, .property-name{
-  box-sizing: border-box;
-  border: 1px solid gray;
-}
-
 /* To keep filter items in order */
-
 span.filter-type-name{
  min-width: 85px;
+}
+
+/* Responsive */
+@media only screen and (max-width: 954px) {
+ 
+  .form-box{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: 100%;
+    margin:2px;
+    padding-left: 4px;
+    line-height: 2;
+  }
+  .stays-filter{
+    width: 25%;
+    padding: 2px;
+    margin-left: -14%;
+  }
+  #pgfor, #roomtype, #preferredfor, #housetype, #housefor{
+    color: rgb(150, 5, 65);
+    font-size: 18px;
+    font-weight: 900;
+    width: 150px;
+    letter-spacing: 1px;
+    padding-left: 0%;
+    margin-right: -100px
+  }
+  .form-box{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: 95%;
+    line-height: 2;
+  }
+  
+}
+@media only screen  and (max-width: 1270px) {
+  .result-section{
+    width: 80%;
+    position: relative;
+    margin-left: 190px;
+    }
+}
+ @media only screen  and (max-width: 960px) {
+  .result-section{
+    width: 70%;
+    position: relative;
+    margin-left: 166px;
+    }
+}
+@media only screen  and (max-width: 640px) {
+  .result-section{
+    width: 62%;
+    position: relative;
+    margin-left: 180px;
+    }
+    .location{
+      display: flex;
+      justify-content: center;
+      margin: -20px;
+      margin-right: -155px;
+      padding: 0px 0px;
+    }
+    .top{
+      width: 28%;
+      margin-top: 34px;
+      margin-left: -35px;
+    }
+}
+@media only screen  and (max-width: 500px) {
+  .result-section{
+    width: 60%;
+    position: relative;
+    margin-left: 151px;
+    }
+    .filter-section{
+      width: 195px;
+      align-items: left;
+    }
+    .container{
+      margin-left: -11px;
+    }
+    .location{
+      display: inline-flex;
+      justify-content: flex-end;
+      margin: -10px -26px;
+      padding: 0px 0px;
+      flex-wrap: nowrap;
+    }
+    .top{
+      width: 45%;
+      margin-top: 38px;
+      margin-left: 80px;
+      margin-right: 26px;
+    }
+    .search{
+      width: 46%;
+      padding: 0px;
+      margin-top: -15px;
+      margin-left: -16px;
+    
+    }
+}
+
+/* Single property */
+.single-property{
+  margin:12px 0.5px;
+  border: 1px solid grey;
+  /* box-shadow: 1px 1px 1px 1px gray; */
 }

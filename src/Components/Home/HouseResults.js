@@ -1,72 +1,77 @@
-import React from "react";
-import { Container, Row, Col } from "react-bootstrap";
+import React, { useEffect, useState } from "react";
+
+import Axios from "axios";
 
 function HouseResults() {
+  const [loading, setLoading] = useState(true);
+  const [info, setInfo] = useState([]);
+  // const [timeOutId, setTimeOutId] = useState("");
+
+  //https://need-based-stay.herokuapp.com/filter?q=uppal ---> query
+
+  useEffect(() => {
+    const fetchInfo = async () => {
+      setLoading(true);
+      try {
+        const response = await Axios.get(
+          "https://need-based-stay.herokuapp.com/filter"
+        );
+        setInfo(response.data);
+      } catch (error) {
+        console.error(error.message);
+      }
+      setLoading(false);
+    };
+
+    fetchInfo();
+  }, []);
+
   return (
-    <div>
-      <Container className="single-property">
-        <Row className="property-name">
-          <Col sm={8}>
-            <h5>House1</h5>
-            <p>Location</p>
-          </Col>
-        </Row>
-        <Row className="property-details">
-          <Col sm={4} className="prop-img">
-            <img
-              src="https://st4.depositphotos.com/16030310/25210/v/600/depositphotos_252105266-stock-illustration-vector-illustration-silver-golden-letters.jpg"
-              alt="house"
-              width={200}
-            />
-          </Col>
-          <Col sm={4} className="prop-info1">
-            <h5>Details</h5>
-          </Col>
-          <Col sm={4} className="prop-info2">
-            <h5>Details</h5>
-          </Col>
-        </Row>
-      </Container>
-      <Container className="single-property">
-        <Row className="property-name">
-          <Col sm={8}>
-            <h5>House2</h5>
-            <p>Location</p>
-          </Col>
-        </Row>
-        <Row className="property-details">
-          <Col sm={4} className="prop-img">
-            <img
-              src="https://st4.depositphotos.com/16030310/25210/v/600/depositphotos_252105266-stock-illustration-vector-illustration-silver-golden-letters.jpg"
-              alt="house"
-              width={200}
-            />
-          </Col>
-          <Col sm={4} className="prop-info1">
-            <h5>Details</h5>
-          </Col>
-          <Col sm={4} className="prop-info2">
-            <h5>Details</h5>
-          </Col>
-        </Row>
-      </Container>
-      {/* <Container>
-        <Row>
-          <Col sm={8}>
-            <h5>Pg2</h5>
-            <p>Location</p>
-          </Col>
-        </Row>
-        <Row>
-          <Col sm={4}>
-            <h5>Images</h5>
-          </Col>
-          <Col sm={4}>
-            <h5>Details</h5>
-          </Col>
-        </Row>
-      </Container> */}
-    </div>
+    <>
+      {loading && <div>Loading please wait....</div>}
+      {!loading &&
+        info.map((house) => (
+          <div className="property-container" key={house._id}>
+            <div className="row single-property">
+              <div className="row">
+                <div className="col">
+                  <h5>{house.propertyName}</h5>
+                  <footer>
+                    <span>Location: </span>
+                    {house.propertyLocation}
+                  </footer>
+                </div>
+                <div className="col">
+                  <p>
+                    <span>Gender: </span>
+                    {house.gender}
+                  </p>
+                </div>
+              </div>
+              <hr />
+              <div className="row">
+                <div className="col">
+                  <img
+                    id="image"
+                    src="https://st4.depositphotos.com/16030310/25210/v/600/depositphotos_252105266-stock-illustration-vector-illustration-silver-golden-letters.jpg"
+                    alt="house"
+                  />
+                </div>
+                <div className="col">
+                  <h5>Details</h5>
+                  <p>
+                    <span></span>
+                    {house.description}
+                  </p>
+                </div>
+                <div className="col">
+                  <h5>Details</h5>
+                </div>
+              </div>
+            </div>
+          </div>
+        ))}
+    </>
   );
 }
 

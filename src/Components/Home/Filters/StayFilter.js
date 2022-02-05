@@ -13,34 +13,36 @@ export default function StayFilter() {
 
   return (
     <>
-      <section className="radio-section">
-        <ul className="radio-list">
-          <li className="radio-item">
-            <input
-              className="pg-input"
-              type="radio"
-              name="radio"
-              id="pgs"
-              onClick={() => handlePgClick(true)}
-            />
-            <label className="pg-label" htmlFor="pgs">
-              PGs
-            </label>
-          </li>
-          <li className="radio-item">
-            <input
-              className="house-input"
-              type="radio"
-              name="radio"
-              id="houses"
-              onClick={() => handlePgClick(false)}
-            />
-            <label className="house-label" htmlFor="houses">
-              Houses
-            </label>
-          </li>
-        </ul>
-      </section>
+      <div className="row radio-section">
+        <div className="col">
+          <ul className="radio-list">
+            <li className="radio-item">
+              <input
+                className="pg-input"
+                type="radio"
+                name="radio"
+                id="pgs"
+                onClick={() => handlePgClick(true)}
+              />
+              <label className="pg-label" htmlFor="pgs">
+                PGs
+              </label>
+            </li>
+            <li className="radio-item">
+              <input
+                className="house-input"
+                type="radio"
+                name="radio"
+                id="houses"
+                onClick={() => handlePgClick(false)}
+              />
+              <label className="house-label" htmlFor="houses">
+                Houses
+              </label>
+            </li>
+          </ul>
+        </div>
+      </div>
     </>
   );
 }
