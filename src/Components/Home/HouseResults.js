@@ -1,37 +1,22 @@
-import React, { useEffect, useState } from "react";
+import React from "react";
 
-import Axios from "axios";
+import { useSelector } from "react-redux";
+
+// import { Link } from "react-router-dom";
+//https://need-based-stay.herokuapp.com/filter?q=uppal ---> query
 
 function HouseResults() {
-  const [loading, setLoading] = useState(true);
-  const [info, setInfo] = useState([]);
-  // const [timeOutId, setTimeOutId] = useState("");
+  const stays = useSelector((state) => state.stays.stays);
 
-  //https://need-based-stay.herokuapp.com/filter?q=uppal ---> query
-
-  useEffect(() => {
-    const fetchInfo = async () => {
-      setLoading(true);
-      try {
-        const response = await Axios.get(
-          "https://need-based-stay.herokuapp.com/filter"
-        );
-        setInfo(response.data);
-      } catch (error) {
-        console.error(error.message);
-      }
-      setLoading(false);
-    };
-
-    fetchInfo();
-  }, []);
+  // console.log("stays " + stays);
 
   return (
     <>
-      {loading && <div>Loading please wait....</div>}
-      {!loading &&
-        info.map((house) => (
+      {!stays && <div>Loading please wait....</div>}
+      {stays &&
+        stays.map((house) => (
           <div className="property-container" key={house._id}>
+            {/* <Link to={single post}> */}
             <div className="row single-property">
               <div className="row">
                 <div className="col">
@@ -69,6 +54,7 @@ function HouseResults() {
                 </div>
               </div>
             </div>
+            {/* </Link> */}
           </div>
         ))}
     </>
