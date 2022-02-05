@@ -1,9 +1,25 @@
-import { HOUSE_CLICK, PG_CLICK } from "../Actions";
+import { ActionTypes } from "../Constants/action-types";
+
+const { HOUSE_CLICK, PG_CLICK, FETCH_STAYS } = ActionTypes;
 
 let initialState = {
+  stays: [],
   houseClick: false,
-  pgClick: true,
+  pgClick: false,
 };
+
+export function fetchStaysReducer(state = initialState, action) {
+  switch (action.type) {
+    case FETCH_STAYS:
+      return {
+        ...state,
+        stays: action.payload,
+      };
+
+    default:
+      return state;
+  }
+}
 
 export default function HouseClickReducer(state = initialState, action) {
   switch (action.type) {
