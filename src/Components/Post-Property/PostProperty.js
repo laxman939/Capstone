@@ -31,8 +31,15 @@ const PostProperty = () => {
                      <option value="TwoShare">TwoShare</option>
                      <option value="ThreeShare">ThreeShare</option>
                      <option value="FourShare">FourShare</option>
-                     <option value="FiveShare">FiveShare</option>
-                     <option value="SixShare">SixShare</option>
+                     <label>
+                 Gender:<input type="text" name="Gender" />
+                     </label>
+                     <select>
+                     <option value="Male">Male</option>
+                     <option value="Female">Female</option>
+                     <option value="Both">Both</option>
+                     
+                     </select>
                      </select><br/>
                      <label>
                  HousePreferred<input type="Text" name= "HousePreferred" />
@@ -45,10 +52,7 @@ const PostProperty = () => {
                  HouseType<input type="Text" name= "Housetype" /><br/>
                      </label>
                      <select>
-                     <option value="1st Floor">1st Floor</option>
-                     <option value="2nd Floor">2nd Floor</option>
-                     <option value="3rd Floor">3rd Floor</option>
-                     <option value="Flat">Flat</option>
+                      <option value="Flat">Flat</option>
                      <option value="Independent">Independent</option>
                      </select><br/>
                      <label>
@@ -82,6 +86,15 @@ const PostProperty = () => {
                 <label>
                  MobileNumber:<input type="text" name="MobileNumber" />
                      </label>
+                   <label>
+                 Gender:<input type="text" name="Gender" />
+                     </label>
+                     <select>
+                     <option value="Male">Male</option>
+                     <option value="Female">Female</option>
+                     <option value="Both">Both</option>
+                     
+                     </select>
                      <label>
                  PriceRange:<input type="text" name="PriceRange" />
                      </label>
