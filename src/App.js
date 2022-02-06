@@ -7,7 +7,7 @@ import SignIn from "./Components/SignIn/SignIn";
 import SignUp from "./Components/SignUp/SignUp";
 import PostProperty from "./Components/Post-Property/PostProperty";
 import Navigation from "./Components/Navigation/Navigation";
-import User from "./Components/User/App";
+import User from "./Components/User/user";
 
 function App() {
   return (

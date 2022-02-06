@@ -34,7 +34,6 @@ export default function Home() {
         <div className="col-6 col-sm-3 filter-section">
           <aside>
             <h5 className="filter-title">Filters</h5>
-            <hr />
             <div className="container filter-container">
               <div className="row stays-filter">
                 <div className="col-sm">
