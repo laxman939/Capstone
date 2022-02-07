@@ -8,7 +8,7 @@ import { useSelector } from "react-redux";
 function HouseResults() {
   const stays = useSelector((state) => state.stays.stays);
 
-  // console.log("stays " + stays);
+  console.log("stays " + stays);
 
   return (
     <>
@@ -27,10 +27,10 @@ function HouseResults() {
                   </footer>
                 </div>
                 <div className="col">
-                  <p>
+                  {/* <p>
                     <span>Gender: </span>
                     {house.gender}
-                  </p>
+                  </p> */}
                 </div>
               </div>
               <hr />
