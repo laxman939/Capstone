@@ -5,7 +5,7 @@ import fetchApi from "../../Apis/fetchStay";
 const { HOUSE_CLICK, PG_CLICK, FETCH_STAYS } = ActionTypes;
 
 export const fetchStays = () => async (dispatch) => {
-  const response = await fetchApi.get("/filter"); //Middleware  --> sync to async
+  const response = await fetchApi.get("/"); //Middleware  --> sync to async
 
   dispatch({
     type: FETCH_STAYS,
