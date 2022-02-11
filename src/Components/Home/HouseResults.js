@@ -2,8 +2,9 @@ import React from "react";
 
 import { useSelector } from "react-redux";
 
+import Loader from "../Spinner/Loader";
+
 // import { Link } from "react-router-dom";
-//https://need-based-stay.herokuapp.com/filter?q=uppal ---> query
 
 function HouseResults() {
   const stays = useSelector((state) => state.stays.stays);
@@ -12,7 +13,7 @@ function HouseResults() {
 
   return (
     <>
-      {!stays && <div>Loading please wait....</div>}
+      {!stays && <Loader />}
       {stays &&
         stays.map((house) => (
           <div className="property-container" key={house._id}>
@@ -28,9 +29,9 @@ function HouseResults() {
                 </div>
                 <div className="col">
                   {/* <p>
-                    <span>Gender: </span>
-                    {house.gender}
-                  </p> */}
+            <span>Gender: </span>
+            {house.gender}
+          </p> */}
                 </div>
               </div>
               <hr />
@@ -60,5 +61,4 @@ function HouseResults() {
     </>
   );
 }
-
 export default HouseResults;
